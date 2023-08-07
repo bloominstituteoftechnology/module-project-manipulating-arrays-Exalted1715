@@ -27,11 +27,21 @@
     // 🧠 Examples of usage:
     // sumNumsFor([1, 2, 3]) // should return 6
     // sumNumsFor([1, 2, 13]) // should return "I'm too superstitious!"
-    // ❗ Notes:
+    // ❗ Notes
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
-    function sumNumsFor(nums) {
+  
 
+    function sumNumsFor(nums) {
+      let result = 0
+      for (let idx = 0; idx < nums.length; idx++){
+        let element = nums[idx]
+        if (typeof element === 'number' ) {
+          if (element === 13) {
+            return "I'm too superstitious!"
+          }
+        }
+      } 
     }
 
     // 👉 CHALLENGE 2
