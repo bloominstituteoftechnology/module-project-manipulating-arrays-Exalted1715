@@ -109,10 +109,10 @@
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(lifePoints) {
       let round = 1
-      while (lifePoints = 0) {
+      while (lifePoints > 0) {
        lifePoints -= round
        if (lifePoints <= 0) {
-         return `You died in round ${round}.` // index of the round isnt used here. Round should just work.
+         return `You died in round ${round}` // index of the round isnt used here. Round should just work.
        }
        round++ 
       }
