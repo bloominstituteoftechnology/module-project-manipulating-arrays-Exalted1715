@@ -34,14 +34,16 @@
 
     function sumNumsFor(nums) {
       let result = 0
-      for (let idx = 0; idx < nums.length; idx++){
-        let element = nums[idx]
+      for (let index = 0; index < nums.length; index++){
+        let element = nums[index]
         if (typeof element === 'number' ) {
           if (element === 13) {
             return "I'm too superstitious!"
           }
+          result = result + element
         }
       } 
+      return result
     }
 
     // 👉 CHALLENGE 2
@@ -51,17 +53,42 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
-
+      //if (str === "a" || str === "e" || str === "i" || str === "o" || str === "u") {
+        //delete str[index]
+      
+      let splitVowels = str.split("")
+      let result = []
+      for (let index = 0; index <= splitVowels.length; index++) {
+        let character = splitVowels[index]
+        if (character !== "a" && character !== "e" && character !== "i" && character !== "o" && character !== "u") {
+        result.push(character)
+        
+      }
     }
+    return result.join('') // this should rejoin the array held in array
+  }
 
     // 👉 CHALLENGE 3
     // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
     // 🧠 Examples of usage:
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
-    function sumNumsWhile() {
-
+    function sumNumsWhile(nums) {
+      let result = 0
+      let index = 0
+      while (index < nums.length){
+        let element = nums[index]
+        index++;
+        if (typeof element === 'number' ) {
+          if (element === 13) {
+            return "I'm too superstitious!"
+          }
+          result = result + element
+        }
+      } 
+      return result
     }
+    
 
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
@@ -80,7 +107,15 @@
     // 🧠 There are many ways to solve this, but practice using a while loop.
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
-    function fightMonsters() {
+    function fightMonsters(lifePoints) {
+      let round = 1
+      while (lifePoints = 0) {
+       lifePoints -= round
+       if (lifePoints <= 0) {
+         return `You died in round ${round}.` // index of the round isnt used here. Round should just work.
+       }
+       round++ 
+      }
 
     }
 
