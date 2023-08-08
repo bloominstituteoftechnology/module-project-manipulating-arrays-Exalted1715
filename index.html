@@ -126,8 +126,22 @@
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-    function findEvenNums() {
+    
+    
 
+    function findEvenNums(integers) {
+      let onlyEvens = [] 
+      let index = 0
+      while (index < integers.length) {
+          let num = integers[index]
+        if (num % 2 === 0 ){
+          onlyEvens.push(num)
+          
+        }
+        index ++
+      }
+      
+      return onlyEvens
     }
 
     // 👉 CHALLENGE 6
@@ -137,7 +151,7 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
+    function separateAges(ages) {
 
     }
 
