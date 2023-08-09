@@ -144,6 +144,8 @@
       return onlyEvens
     }
 
+
+
     // 👉 CHALLENGE 6
     // 🧠 The function separateAges takes an array of integers (ages) as its argument.
     // 🧠 It returns a new array containing two elements, which happen to also be arrays.
@@ -152,7 +154,20 @@
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
     function separateAges(ages) {
-
+      let below21 = []
+      let above21 = []
+      let index = 0
+      while (index < ages.length) {
+        let age = ages[index]
+        if (age < 21 ) {
+          below21.push(age)
+        } else {
+          above21.push(age)
+        }
+        index++
+      }
+      return [below21, above21]
+      
     }
 
     // 👉 CHALLENGE 7
@@ -162,8 +177,13 @@
     // 🧠 The "tail" prop contains an array holding the elements of the array after the first one.
     // 🧠 Examples of usage:
     // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
-    function headAndTail() {
-
+    function headAndTail(arr) {
+      let quarterGame = {
+        head: " ",
+        tail: " "
+      };
+      
+     // console.log(quarterGame);
     }
 
     // 👉 CHALLENGE 8
